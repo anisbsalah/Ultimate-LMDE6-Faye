@@ -54,6 +54,10 @@ echo "##########################################################################
 tput sgr0
 echo
 
+# Disable default theme
+[[ -f /etc/default/grub.d/60_mint-theme.cfg ]] && sudo mv /etc/default/grub.d/60_mint-theme.cfg /etc/default/grub.d/60_mint-theme.cfg.bak
+
+# Install poly-dark
 wget -P /tmp https://github.com/anisbsalah/poly-dark/raw/main/install.sh
 bash /tmp/install.sh --lang English
 
@@ -73,9 +77,7 @@ bash /tmp/install.sh --lang English
 #
 # grep "GRUB_THEME=" /etc/default/grub >/dev/null 2>&1 && sudo sed -i '/GRUB_THEME=/d' /etc/default/grub
 # grep "GRUB_BACKGROUND=" /etc/default/grub >/dev/null 2>&1 && sudo sed -i '/GRUB_BACKGROUND=/d' /etc/default/grub
-#
 # sudo apt install --reinstall -o Dpkg::Options::="--force-confmiss" grub2-theme-mint -y
-#
 # sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo
