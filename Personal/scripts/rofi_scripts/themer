@@ -100,7 +100,7 @@ gsettings set org.gnome.gedit.preferences.editor scheme "${gedit_scheme}"
 gsettings set org.x.editor.preferences.editor scheme "${gedit_scheme}"
 
 # Copy Alacritty and Kitty theme files
-cp "${HOME}/.config/alacritty/themes/${alacritty_theme}.toml" "${HOME}/.config/alacritty/colors.toml"
+cp "${HOME}/.config/alacritty/themes/${alacritty_theme}.yaml" "${HOME}/.config/alacritty/colors.yaml"
 cp "${HOME}/.config/kitty/themes/${kitty_theme}.conf" "${HOME}/.config/kitty/colors.conf"
 
 # Set wezterm theme
