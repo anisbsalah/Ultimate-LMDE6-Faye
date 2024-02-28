@@ -31,7 +31,7 @@ cd /tmp/dark-mint-plymouth || exit
 
 sudo ./install.sh
 
-# sudo plymouth-set-default-theme -R dark-mint
+sudo plymouth-set-default-theme -R dark-mint
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
